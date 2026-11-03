@@ -90,6 +90,11 @@ h2 {
     filter: brightness(1.1);
 }
 
+.button:disabled {
+    filter: grayscale(.6);
+    cursor: progress;
+}
+
 .button.big {
     font-size: 1.2rem;
     padding: 14px 34px;
@@ -152,21 +157,6 @@ main {
 
 .chooser[hidden] {
     display: none;
-}
-
-.drop {
-    width: min(440px, 100%);
-    padding: 20px;
-    border: 2px dashed var(--muted);
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.drop.over,
-.drop:hover,
-.drop:focus {
-    border-color: var(--orange);
-    outline: none;
 }
 
 .small {
