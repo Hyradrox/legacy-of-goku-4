@@ -1,0 +1,244 @@
+:root {
+    --orange: #f08c18;
+    --orange-dark: #b85e08;
+    --night: #101018;
+    --panel: #1c1c2a;
+    --line: #34344a;
+    --text: #ecebf4;
+    --muted: #a6a6bc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Un élément caché le reste, même s'il est stylé (bouton « Lancer la démo » sans ROM publiée). */
+[hidden] {
+    display: none !important;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at 50% 0, #2a1a3a 0, var(--night) 60%) fixed;
+    color: var(--text);
+    font: 16px/1.5 system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+img {
+    image-rendering: pixelated;
+}
+
+a {
+    color: var(--orange);
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px 24px;
+}
+
+.hero-title {
+    width: min(480px, 100%);
+    height: auto;
+    border: 3px solid var(--orange);
+    border-radius: 6px;
+    box-shadow: 0 0 40px rgba(240, 140, 24, .35);
+}
+
+.hero-text {
+    max-width: 440px;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 2.4rem;
+    letter-spacing: .04em;
+    color: var(--orange);
+    text-shadow: 3px 3px 0 #000;
+}
+
+h2 {
+    margin: 0 0 12px;
+    color: var(--orange);
+    font-size: 1.3rem;
+}
+
+.tagline {
+    margin: 6px 0;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 10px 26px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--orange);
+    color: #1a0e00;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 0 var(--orange-dark);
+}
+
+.button:hover {
+    filter: brightness(1.1);
+}
+
+.button.big {
+    font-size: 1.2rem;
+    padding: 14px 34px;
+}
+
+main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 16px 24px;
+}
+
+.panel {
+    margin: 20px 0;
+    padding: 20px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+@media (max-width: 760px) {
+    .two {
+        grid-template-columns: 1fr;
+    }
+}
+
+.screen-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    aspect-ratio: 3 / 2;
+    margin: 0 auto;
+    background: #000;
+    border: 3px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#game {
+    width: 100%;
+    height: 100%;
+}
+
+.chooser {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.chooser[hidden] {
+    display: none;
+}
+
+.drop {
+    width: min(440px, 100%);
+    padding: 20px;
+    border: 2px dashed var(--muted);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.drop.over,
+.drop:hover,
+.drop:focus {
+    border-color: var(--orange);
+    outline: none;
+}
+
+.small {
+    font-size: .88rem;
+    color: var(--muted);
+}
+
+.center {
+    text-align: center;
+}
+
+.keys {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .92rem;
+}
+
+.keys th,
+.keys td {
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+}
+
+.keys th {
+    color: var(--muted);
+    font-weight: 600;
+}
+
+kbd {
+    display: inline-block;
+    min-width: 1.6em;
+    margin: 0 2px 2px 0;
+    padding: 1px 6px;
+    border: 1px solid var(--line);
+    border-bottom-width: 3px;
+    border-radius: 4px;
+    background: #2a2a3c;
+    font: 600 .85rem/1.4 ui-monospace, Consolas, monospace;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+}
+
+.gallery figure {
+    margin: 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 2px solid var(--line);
+}
+
+figcaption {
+    margin-top: 4px;
+    font-size: .88rem;
+    color: var(--muted);
+    text-align: center;
+}
+
+footer {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 16px 32px;
+    font-size: .82rem;
+    color: var(--muted);
+    text-align: center;
+}

@@ -1,0 +1,6 @@
+# La ROM contient des graphismes commerciaux (Legacy of Goku II, Buu's Fury) : elle n'est pas publiée par défaut.
+# Le site fonctionne sans elle (le joueur glisse son fichier .gba). La publier est un choix à faire en connaissance
+# de cause : retirer alors la ligne ci-dessous.
+rom/
+*.gba
+*.sav

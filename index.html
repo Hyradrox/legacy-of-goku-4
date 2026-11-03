@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legacy of Goku 4 — démo jouable</title>
+  <meta name="description" content="Fan game Game Boy Advance non officiel : démo jouable dans le navigateur (prologue et chapitre 1).">
+  <link rel="icon" href="img/icone.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <img class="hero-title" src="img/titre.png" alt="Écran titre de Legacy of Goku 4" width="480" height="320">
+    <div class="hero-text">
+      <h1>Legacy of Goku 4</h1>
+      <p class="tagline">Fan game Game Boy Advance, dans l'esprit de <em>Legacy of Goku II</em> et de <em>Buu's Fury</em>.</p>
+      <p class="tagline">Démo jouable dans le navigateur : <strong>prologue</strong> et <strong>chapitre 1 — Beerus</strong>.</p>
+      <a class="button" href="#jouer">Jouer</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="jouer" class="panel">
+      <h2>Jouer</h2>
+      <div class="screen-wrap">
+        <div id="game"></div>
+        <div id="chooser" class="chooser">
+          <button id="play-hosted" class="button big" hidden>▶ Lancer la démo</button>
+          <div id="drop" class="drop" tabindex="0">
+            <p><strong>Glisse ici le fichier <code>.gba</code> de la démo</strong><br>ou clique pour le choisir.</p>
+            <p class="small">Le fichier reste sur ton ordinateur : il n'est envoyé nulle part.</p>
+            <input id="file" type="file" accept=".gba" hidden>
+          </div>
+          <p id="status" class="small" role="status"></p>
+        </div>
+      </div>
+      <p class="small center">Clique dans l'écran du jeu pour lui donner le clavier. Menu de l'émulateur : en bas de l'écran
+        (plein écran, son, touches, sauvegardes).</p>
+    </section>
+
+    <section class="panel two">
+      <div>
+        <h2>Touches</h2>
+        <table class="keys">
+          <tr><th>Game Boy Advance</th><th>Clavier</th><th>Dans le jeu</th></tr>
+          <tr><td>Croix</td><td><kbd>←</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>↓</kbd></td><td>Se déplacer</td></tr>
+          <tr><td>A</td><td><kbd>X</kbd></td><td>Frapper, parler, fouiller (maintenu : coup chargé)</td></tr>
+          <tr><td>B</td><td><kbd>Z</kbd></td><td>Technique du carré (maintenu : Kamehameha, Poing Genkidama)</td></tr>
+          <tr><td>L</td><td><kbd>A</kbd></td><td>Changer de technique</td></tr>
+          <tr><td>R</td><td><kbd>S</kbd></td><td>Garde ; avec la croix : courir</td></tr>
+          <tr><td>START</td><td><kbd>Entrée</kbd></td><td>Menu (statut, objets, aptitudes)</td></tr>
+          <tr><td>SELECT</td><td><kbd>Retour arrière</kbd></td><td>Carte</td></tr>
+        </table>
+        <p class="small">Manette USB ou Bluetooth reconnue. Sur téléphone et tablette, une croix et des boutons tactiles
+          s'affichent sur l'écran.</p>
+      </div>
+      <div>
+        <h2>Sauvegardes</h2>
+        <p>On sauvegarde dans le jeu sur les cercles <strong>C</strong>. La mémoire de la cartouche est recopiée dans ton
+          navigateur toutes les 30 secondes : attends un instant après avoir sauvegardé avant de fermer la page.</p>
+        <p class="small">Elle reste sur cet appareil et ce navigateur. Le menu de l'émulateur permet d'exporter le
+          fichier de sauvegarde (.sav) pour le garder ou le reprendre ailleurs.</p>
+        <h2>Dans cette démo</h2>
+        <ul>
+          <li>Prologue : la ferme, la Ville de l'Est, les dinosaures, Piccolo, Goten et le retour du Super Saiyan.</li>
+          <li>Chapitre 1 : la planète de Kaio et le Poing Genkidama, le chemin du Serpent, les enfers, le labyrinthe
+            des aiguilles et son énigme, Cell Max, le Super Saiyan 3… et Beerus.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Images</h2>
+      <div class="gallery">
+        <figure><img src="img/kaio.png" alt="Goku chez Kaio" width="240" height="160"><figcaption>Chez Kaio</figcaption></figure>
+        <figure><img src="img/genkidama.png" alt="Goku rassemble le Genkidama devant un rocher maudit" width="240" height="160"><figcaption>Le Poing Genkidama</figcaption></figure>
+        <figure><img src="img/labyrinthe.png" alt="Le labyrinthe des aiguilles" width="240" height="160"><figcaption>Le labyrinthe des aiguilles</figcaption></figure>
+        <figure><img src="img/cell-max.png" alt="Goku en Super Saiyan 3 contre Cell Max" width="240" height="160"><figcaption>Cell Max</figcaption></figure>
+        <figure><img src="img/beerus.png" alt="Beerus et Whis chez Kaio" width="240" height="160"><figcaption>Beerus</figcaption></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projet de fan non officiel et gratuit, sans aucun lien avec les ayants droit. Dragon Ball © Bird Studio /
+      Shueisha, Toei Animation. Une partie des graphismes provient de <em>Legacy of Goku II</em> et de
+      <em>Buu's Fury</em> (Webfoot Technologies / Atari).</p>
+    <p>Émulation : <a href="https://emulatorjs.org/">EmulatorJS</a> (cœur mGBA).</p>
+  </footer>
+
+  <script src="play.js"></script>
+</body>
+</html>
